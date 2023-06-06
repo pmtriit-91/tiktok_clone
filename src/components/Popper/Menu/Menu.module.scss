@@ -1,0 +1,50 @@
+// Menu
+.menu-list {
+    width: 224px;
+}
+
+.menu-item {
+    width: 100%;
+    margin-left: 0 !important;
+    justify-content: flex-start !important;
+    border-radius: 0 !important;
+    color: var(--textColor);
+    padding: 9px 16px !important;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600 !important;
+    color: var(--textColor);
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
+    &:hover {
+        background-color: var(--hover-background-color);
+    }
+}
+
+.menu-popper {
+    padding-bottom: 8px;
+}
+
+// Header
+.header {
+    font-family: 'Hind Siliguri', sans-serif;
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

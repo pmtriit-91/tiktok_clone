@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 9px 16px;
+
+    &:hover{
+        background-color: var(--hover-background-color);
+    }
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    flex: 1;
+    margin-left: 16px;
+    line-height: 1;
+}
+
+.name {
+    font-size: 1.6rem;
+    line-height: 22px;
+    font-weight: 600;
+    color: #161823;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.check {
+    margin-left: 8px;
+    // font-size: 1.6rem;
+    color: #20D5EC;
+}
+
+.username {
+    font-size: 1.4rem;
+    line-height: 20px;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
