@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner, faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
+import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons';
 import HeadLessTippy from '@tippyjs/react/headless';
 
 import styles from './Search.module.scss'
@@ -84,7 +84,6 @@ function Search() {
                             <FontAwesomeIcon icon={faXmarkCircle} />
                         </button>
                     )}
-                    {/* {true && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />} */}
                     {loading && <Loading className={cx('loading')} />}
                     <button className={cx('search-btn')}>
                         <SearchIcon />

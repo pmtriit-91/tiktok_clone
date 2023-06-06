@@ -1,11 +1,10 @@
-import { Fragment } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import { Menu, Wrapper as PopperWrapper } from '~/components/Popper';
+import { Menu } from '~/components/Popper';
 import styles from './Header.module.scss'
 import images from '~/assets/images';
 import Button from '~/components/Button';
