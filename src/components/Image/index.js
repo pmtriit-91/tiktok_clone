@@ -15,7 +15,8 @@ function Image({ src, alt, className, ...props }, ref) {
         <img
             className={classNames(styles.wrapper, className)}
             src={fallback || src}
-            ref={ref} {...props}
+            ref={ref}
+            {...props}
             onError={handleError}
             alt={alt}
         />

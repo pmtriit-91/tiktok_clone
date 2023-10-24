@@ -27,10 +27,15 @@
     padding-bottom: 8px;
 }
 
+.menu-body {
+    overflow-y: auto;
+}
+
 // Header
 .header {
-    font-family: 'Hind Siliguri', sans-serif;
     position: relative;
+    flex-shrink: 0;
+    font-family: 'Hind Siliguri', sans-serif;
     height: 50px;
     margin-top: -8px;
 }

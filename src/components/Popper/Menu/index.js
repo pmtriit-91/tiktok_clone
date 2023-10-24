@@ -11,7 +11,7 @@ const cx = classNames.bind(styles)
 
 const defaultFnc = () => { }
 
-function Menu({ children, items = [], onChange = defaultFnc }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFnc }) {
 
     const [history, setHistory] = useState([{ data: items }])
     console.log(history);
@@ -41,6 +41,7 @@ function Menu({ children, items = [], onChange = defaultFnc }) {
             interactive
             delay={[0, 500]}
             offset={[12, 10]}
+            hideOnClick={hideOnClick}
             placement='bottom-end'
             render={attrs => (
                 <div className={cx('menu-list')} tapindex='-1' {...attrs}>
@@ -48,7 +49,7 @@ function Menu({ children, items = [], onChange = defaultFnc }) {
                         {history.length > 1 && <Header title={'Language'} onBack={() => {
                             setHistory(prev => prev.slice(0, prev.length - 1))
                         }} />}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}

@@ -12,6 +12,18 @@
     border-radius: var(--search-border-radius);
     border: 1.5px solid transparent;
 
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+
+        .search-btn {
+            background-color: rgba(22, 24, 35, 0.06);
+        }
+
+        .searchIcon {
+            color: black;
+        }
+    }
+
     input {
         flex: 1;
         height: 100%;
@@ -19,6 +31,7 @@
         font-size: 1.6rem;
         background-color: transparent;
         caret-color: var(--primary);
+        font-family: var(--font-family);
     }
 
     &::before {
@@ -83,7 +96,7 @@ input:not(:placeholder-shown)~.search-btn {
 
     &:hover {
         cursor: pointer;
-        background-color: rgba(22, 24, 25, 0.03);
+        background-color: rgba(22, 24, 35, 0.06);
     }
 
     &:active {

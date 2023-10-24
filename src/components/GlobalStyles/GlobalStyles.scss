@@ -9,6 +9,8 @@
     --textColor: rgb(22, 24, 35);
     --hover-background-color: rgba(22, 24, 35, 0.03);
 
+    --font-family: 'ProximaNova', sans-serif;
+
     //Default Layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -26,10 +28,27 @@ html {
 }
 
 body {
-    font-family: 'ProximaNova', sans-serif;
+    overflow-y: overlay;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+//srollbar css
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, .06);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 button,
@@ -50,16 +69,19 @@ a[href] {
     src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
     font-weight: 400;
 }
+
 @font-face {
     font-family: ProximaNova;
     src: url('/assets/fonts/ProximaNova-Semibold.woff2');
     font-weight: 600;
 }
+
 @font-face {
     font-family: ProximaNova;
     src: url('/assets/fonts/Proxima-Nova-Bold.woff');
     font-weight: 700;
 }
+
 @font-face {
     font-family: SofiaPro;
     src: url('/assets/fonts/sofiapro-bold.woff');

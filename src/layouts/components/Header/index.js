@@ -1,16 +1,18 @@
-import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
+import classNames from 'classnames/bind'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons'
+import Tippy from '@tippyjs/react'
+import 'tippy.js/dist/tippy.css'
+import { Link } from 'react-router-dom'
 
-import { Menu } from '~/components/Popper';
+import routesConfig from '~/config/routes'
+import { Menu } from '~/components/Popper'
 import styles from './Header.module.scss'
-import images from '~/assets/images';
-import Button from '~/components/Button';
+import images from '~/assets/images'
+import Button from '~/components/Button'
 import { Coin, InboxIcon, Keyboard, Language, Logout, MessageIcon, Persion, PlusIcon, Question, Setting } from '~/components/Icons';
-import Image from '~/components/Image';
-import Search from '../Search';
+import Image from '~/components/Image'
+import Search from '../Search'
 
 const cx = classNames.bind(styles)
 
@@ -29,7 +31,7 @@ const MENU_ITEMS = [
                 {
                     type: 'Language',
                     code: 'vi',
-                    title: 'Việt Nam'
+                    title: 'Tiếng Việt'
                 }
             ]
         }
@@ -88,9 +90,7 @@ function Header() {
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
 
-            <div className={cx('logo')}>
-                <img src={images.logo} alt='Tiktok' />
-            </div>
+            <Link to={routesConfig.home} className={cx('logo')}><img src={images.logo} alt='Tiktok' /></Link>
 
             <Search />
 
@@ -129,7 +129,7 @@ function Header() {
                         <Image
                             className={cx('user-avatar')}
                             alt='Nguyen van A'
-                            src='https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/7006132335699558402.jpeg?x-expires=1684756800&x-signature=DPyzulccFjrsbzEm1Ecnp5hO%2Bso%3D'
+                            src='https://p16-sign-sg.tiktokcdn.com/aweme/720x720/tiktok-obj/7006132335699558402.jpeg?x-expires=1687183200&x-signature=Px40Ttae%2Fa0cXW%2BX4hGWvWTih1k%3D'
                         />
                     ) : (
                         <button className={cx('more-btn')}>
